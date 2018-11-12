@@ -15,3 +15,6 @@ hadoop jar /home/bd/lc/jar/MR_wordCount-2.0_spark.jar MR_Sougou "hdfs://10.199.1
 Spark Program submission method:
 
 spark-submit --master yarn-client --driver-memory 4g --driver-cores 1 --executor-memory 3g --total-executor-cores 4 --class WordSimi /hom    e/bd/lc/jar/MR_wordCount-3.0_spark_kmeans.jar /lc/SogouQ/outcome/p1M
+
+dataSets:
+http://www.sogou.com/labs/resource/q.php
