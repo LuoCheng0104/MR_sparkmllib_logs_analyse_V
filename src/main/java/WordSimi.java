@@ -45,12 +45,12 @@ public class WordSimi {
                 .setVectorSize(6)
                 .setMinCount(0);
         Word2VecModel model = word2Vec.fit(documentDF);
-        //model.save("D:\\IDEA\\IDEAproject\\MR_wordCount\\src\\modelfile\\Word2VecModel");
+        model.save("D:\\IDEA\\IDEAproject\\MR_wordCount\\src\\modelfile\\Word2VecModel");
         Dataset<Row> result = model.transform(documentDF);
         //将向量作为特征进行聚类
         KMeans kmeans=new KMeans().setK(3).setSeed(1L);
         KMeansModel model_kmean=kmeans.fit(result);
-       // model_kmean.save("D:\\IDEA\\IDEAproject\\MR_wordCount\\src\\modelfile\\KMeansModel");
+        model_kmean.save("D:\\IDEA\\IDEAproject\\MR_wordCount\\src\\modelfile\\KMeansModel");
         Dataset<Row> prediction=model_kmean.transform(result);
         prediction.createTempView("results_table");
         prediction.show();
