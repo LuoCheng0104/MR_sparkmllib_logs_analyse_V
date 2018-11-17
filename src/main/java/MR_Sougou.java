@@ -10,6 +10,10 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
+/**
+ * This program is used to do user search keywords aggregation,
+ * and the aggregated files into HDFS
+ */
 public class MR_Sougou {
     public static class TokenizerMapper extends Mapper<LongWritable, Text, Text, Text>{
         private Text userid = new Text();
