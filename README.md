@@ -11,3 +11,8 @@ kafka 2.11-2.0.0
 
 dataSets:
 http://www.sogou.com/labs/resource/q.php
+
+Data processing process:
+data————>MapReduce——>word2vec————>Kmeans————>Kdtree
+ 
+To be continued!!!!!!!!
